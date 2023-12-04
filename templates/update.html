@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.js"></script>
+
+</head>
+<body>
+
+<center><h1>Edit User</h1><br></center>
+<form action="/update_save" method="get">
+<center>
+{%for v in user_edit%}
+<br>
+    <div class="ui input">
+        <h1>Username </h1> <input name="username" value="{{v[0]}}" type="text">
+</div>
+<br>
+<br>
+    <div class="ui input">
+<h1>Password </h1><input name="user_password" value="{{v[1]}}" type="text">
+        </div>
+<br>
+<br>
+        <div class="ui input">
+<h1>User Type </h1><input name="user_type" value="{{v[2]}}" type="text">
+            </div>
+<br>
+<br>
+            <div class="ui input">
+<h1>Balance</h1><input name="balance" value="{{v[3]}}" type="text">
+                </div>
+{%endfor%}
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="ui button">Save</button>
+    </center>
+
+    </form>
+</body>
+</html>
